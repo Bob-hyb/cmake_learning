@@ -4,13 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ybhuang/torment/cmake_learning/cmake_learning/step1/tutorial.cxx" "/home/ybhuang/torment/cmake_learning/cmake_learning/step1/step1_build/CMakeFiles/Tutorial.dir/tutorial.cxx.o"
+  "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/mysqrt.cxx" "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "."
   )
 
 # Targets to which this target links.

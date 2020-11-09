@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ybhuang/torment/cmake_learning/cmake_learning/step1
+CMAKE_SOURCE_DIR = /home/ybhuang/torment/cmake_learning/cmake_learning/stepx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ybhuang/torment/cmake_learning/cmake_learning/step1/step1_build
+CMAKE_BINARY_DIR = /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ybhuang/torment/cmake_learning/cmake_learning/step1/step1_build/CMakeFiles /home/ybhuang/torment/cmake_learning/cmake_learning/step1/step1_build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CMakeFiles /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ybhuang/torment/cmake_learning/cmake_learning/step1/step1_build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,19 @@ Tutorial/fast:
 	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/build
 .PHONY : Tutorial/fast
 
+#=============================================================================
+# Target rules for targets named MathFunctions
+
+# Build rule for target.
+MathFunctions: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MathFunctions
+.PHONY : MathFunctions
+
+# fast build rule for target.
+MathFunctions/fast:
+	$(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
+.PHONY : MathFunctions/fast
+
 tutorial.o: tutorial.cxx.o
 
 .PHONY : tutorial.o
@@ -159,6 +172,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Tutorial"
 	@echo "... edit_cache"
+	@echo "... MathFunctions"
 	@echo "... tutorial.o"
 	@echo "... tutorial.i"
 	@echo "... tutorial.s"

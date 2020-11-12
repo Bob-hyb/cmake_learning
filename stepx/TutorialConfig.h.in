@@ -2,4 +2,5 @@
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
 
+// this line is required for ifdef... in tutorial.cxx
 #cmakedefine USE_MYMATH

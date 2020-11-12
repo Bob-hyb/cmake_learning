@@ -1,6 +1,3 @@
 /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CMakeFiles/rebuild_cache.dir
 /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CMakeFiles/Tutorial.dir
 /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CMakeFiles/edit_cache.dir
-/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/MathFunctions/CMakeFiles/rebuild_cache.dir
-/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/MathFunctions/CMakeFiles/MathFunctions.dir
-/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/MathFunctions/CMakeFiles/edit_cache.dir

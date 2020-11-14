@@ -11,6 +11,8 @@ iostream
 -
 TutorialConfig.h
 -
-cmath
+Table.h
 -
+
+MathFunctions/Table.h
 

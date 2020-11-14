@@ -7,5 +7,5 @@
 
 // does the platform provide exp and log functions?
 /* Not needed because we use target_compile_definition */
-// #define HAVE_LOG
-// #define HAVE_EXP
+/* #undef HAVE_LOG */
+/* #undef HAVE_EXP */

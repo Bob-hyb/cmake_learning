@@ -1,0 +1,4 @@
+/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial
+/home/ybhuang/torment/cmake_learning/cmake_learning/install/TutorialConfig.h
+/home/ybhuang/torment/cmake_learning/cmake_learning/install/libMathFunctions.a
+/home/ybhuang/torment/cmake_learning/cmake_learning/install/MathFunctions.h

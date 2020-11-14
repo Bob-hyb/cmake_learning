@@ -7,3 +7,6 @@ add_library(MathFunctions mysqrt.cxx)
 # added to our project directory.
 target_include_directories(MathFunctions
                            INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})                               
+
+install(TARGETS MathFunctions DESTINATION /home/ybhuang/torment/cmake_learning/cmake_learning/install)
+install(FILES MathFunctions.h DESTINATION /home/ybhuang/torment/cmake_learning/cmake_learning/install)

@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+../MathFunctions/MathFunctions.h
+
 /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/tutorial.cxx
 cmath
 -

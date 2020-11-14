@@ -34,3 +34,31 @@ target_include_directories(Tutorial PUBLIC
 # used for make install
 install(TARGETS Tutorial DESTINATION "/home/ybhuang/torment/cmake_learning/cmake_learning/install")
 install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION "/home/ybhuang/torment/cmake_learning/cmake_learning/install")
+
+# There is an already exited executble named ctest, it will read the test config file named cTestTestfile.cmake to do the test
+# for us, you can also use "make test" to do the test. 
+# This file is generated alongside makefile
+enable_testing()
+# does the application run
+add_test(NAME Runs COMMAND Tutorial 25)
+
+# makes use of the PASS_REGULAR_EXPRESSION test property to verify that the output of the test contains certain strings.
+add_test(NAME Usage COMMAND Tutorial)
+set_tests_properties(Usage PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number")
+
+# define a function to simplify adding tests
+function(do_test target arg result)
+  add_test(NAME Comp${arg} COMMAND ${target} ${arg})
+  set_tests_properties(Comp${arg}
+    PROPERTIES PASS_REGULAR_EXPRESSION ${result}
+    )
+endfunction(do_test target arg result)
+
+# do a bunch of result based tests
+do_test(Tutorial 4 "4 is 2")
+do_test(Tutorial 9 "9 is 3")
+do_test(Tutorial 5 "5 is 2.236")
+do_test(Tutorial 7 "7 is 2.645")
+do_test(Tutorial 25 "25 is 5")
+do_test(Tutorial -25 "-25 is [-nan|nan|0]")
+do_test(Tutorial 0.0001 "0.0001 is 0.01")

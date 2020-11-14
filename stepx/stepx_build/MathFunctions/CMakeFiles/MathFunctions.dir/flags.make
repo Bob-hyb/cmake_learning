@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -std=gnu++11
 
-CXX_DEFINES = 
+CXX_DEFINES = -DHAVE_EXP -DHAVE_LOG
 
-CXX_INCLUDES = -I/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build 
+CXX_INCLUDES = 
 

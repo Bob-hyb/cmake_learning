@@ -6,5 +6,6 @@
 #cmakedefine USE_MYMATH
 
 // does the platform provide exp and log functions?
-#cmakedefine HAVE_LOG
-#cmakedefine HAVE_EXP
+/* Not needed because we use target_compile_definition */
+// #cmakedefine HAVE_LOG
+// #cmakedefine HAVE_EXP

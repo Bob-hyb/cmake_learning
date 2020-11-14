@@ -16,6 +16,14 @@ if (NOT (HAVE_LOG AND HAVE_EXP))
   endif()
 endif()
 
+# add compile definitions
+# if we use this feature, we don't need to configure TutorialConfig.h.in and include TutorialConfig.h
+# to specify whether we have log and exp.
+if(HAVE_LOG AND HAVE_EXP)
+  target_compile_definitions(MathFunctions
+                             PRIVATE "HAVE_LOG" "HAVE_EXP")
+endif()
+
 # INTERFACE means things that consumers require but the producer doesn’t.
 # So if we include the source directory of a library in our project directory,
 # we don't need to add the source directory to our project's include path explicitly,
@@ -23,7 +31,9 @@ endif()
 # added to our project directory.
 target_include_directories(MathFunctions
                            INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
-                           PRIVATE ${CMAKE_BINARY_DIR})                               
+                           # Not needed because we use target_compile_definition
+                           # PRIVATE ${CMAKE_BINARY_DIR}
+                           )                               
 
 install(TARGETS MathFunctions DESTINATION /home/ybhuang/torment/cmake_learning/cmake_learning/install)
 install(FILES MathFunctions.h DESTINATION /home/ybhuang/torment/cmake_learning/cmake_learning/install)

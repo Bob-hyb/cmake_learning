@@ -1,10 +1,10 @@
-Start testing: Nov 14 11:17 CST
+Start testing: Nov 14 11:41 CST
 ----------------------------------------------------------
 1/9 Testing: Runs
 1/9 Test: Runs
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "25"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Runs" start time: Nov 14 11:17 CST
+"Runs" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 25 to be 13
@@ -22,7 +22,7 @@ The square root of 25 is 5
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Runs" end time: Nov 14 11:17 CST
+"Runs" end time: Nov 14 11:41 CST
 "Runs" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -30,7 +30,7 @@ Test Passed.
 2/9 Test: Usage
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Usage" start time: Nov 14 11:17 CST
+"Usage" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial Version 1.0
@@ -41,7 +41,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[Usage:.*number
 ]
-"Usage" end time: Nov 14 11:17 CST
+"Usage" end time: Nov 14 11:41 CST
 "Usage" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,7 +49,7 @@ Required regular expression found.Regex=[Usage:.*number
 3/9 Test: Comp4
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "4"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp4" start time: Nov 14 11:17 CST
+"Comp4" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 4 to be 2.5
@@ -69,7 +69,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[4 is 2
 ]
-"Comp4" end time: Nov 14 11:17 CST
+"Comp4" end time: Nov 14 11:41 CST
 "Comp4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -77,7 +77,7 @@ Required regular expression found.Regex=[4 is 2
 4/9 Test: Comp9
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "9"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp9" start time: Nov 14 11:17 CST
+"Comp9" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 9 to be 5
@@ -97,7 +97,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[9 is 3
 ]
-"Comp9" end time: Nov 14 11:17 CST
+"Comp9" end time: Nov 14 11:41 CST
 "Comp9" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -105,7 +105,7 @@ Required regular expression found.Regex=[9 is 3
 5/9 Test: Comp5
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "5"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp5" start time: Nov 14 11:17 CST
+"Comp5" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 5 to be 3
@@ -125,7 +125,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[5 is 2.236
 ]
-"Comp5" end time: Nov 14 11:17 CST
+"Comp5" end time: Nov 14 11:41 CST
 "Comp5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -133,7 +133,7 @@ Required regular expression found.Regex=[5 is 2.236
 6/9 Test: Comp7
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "7"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp7" start time: Nov 14 11:17 CST
+"Comp7" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 7 to be 4
@@ -153,7 +153,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[7 is 2.645
 ]
-"Comp7" end time: Nov 14 11:17 CST
+"Comp7" end time: Nov 14 11:41 CST
 "Comp7" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -161,7 +161,7 @@ Required regular expression found.Regex=[7 is 2.645
 7/9 Test: Comp25
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "25"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp25" start time: Nov 14 11:17 CST
+"Comp25" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 25 to be 13
@@ -181,7 +181,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[25 is 5
 ]
-"Comp25" end time: Nov 14 11:17 CST
+"Comp25" end time: Nov 14 11:41 CST
 "Comp25" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -189,7 +189,7 @@ Required regular expression found.Regex=[25 is 5
 8/9 Test: Comp-25
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "-25"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp-25" start time: Nov 14 11:17 CST
+"Comp-25" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 The square root of -25 is 0
@@ -199,7 +199,7 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[-25 is [-nan|nan|0]
 ]
-"Comp-25" end time: Nov 14 11:17 CST
+"Comp-25" end time: Nov 14 11:41 CST
 "Comp-25" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -207,7 +207,7 @@ Required regular expression found.Regex=[-25 is [-nan|nan|0]
 9/9 Test: Comp0.0001
 Command: "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial" "0.0001"
 Directory: /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build
-"Comp0.0001" start time: Nov 14 11:17 CST
+"Comp0.0001" start time: Nov 14 11:41 CST
 Output:
 ----------------------------------------------------------
 Computing sqrt of 0.0001 to be 0.50005
@@ -227,8 +227,8 @@ Test time =   0.00 sec
 Test Pass Reason:
 Required regular expression found.Regex=[0.0001 is 0.01
 ]
-"Comp0.0001" end time: Nov 14 11:17 CST
+"Comp0.0001" end time: Nov 14 11:41 CST
 "Comp0.0001" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 14 11:17 CST
+End testing: Nov 14 11:41 CST

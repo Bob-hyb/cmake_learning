@@ -52,6 +52,7 @@ Mkfile.old
 dkms.conf
 
 # Build folder
+stepx/stepx_build/*
 build/*
 
 # vscode
@@ -59,3 +60,8 @@ build/*
 
 #gitignore test
 *.hahaha
+
+# my define
+*.make
+*.txt
+*.log

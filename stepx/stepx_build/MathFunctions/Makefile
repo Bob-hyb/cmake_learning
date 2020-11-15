@@ -68,29 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -103,16 +80,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -124,6 +102,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -134,6 +123,28 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +179,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+MathFunctions/CMakeFiles/MakeTable.dir/rule:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MakeTable.dir/rule
+.PHONY : MathFunctions/CMakeFiles/MakeTable.dir/rule
+
+# Convenience name for target.
+MakeTable: MathFunctions/CMakeFiles/MakeTable.dir/rule
+
+.PHONY : MakeTable
+
+# fast build rule for target.
+MakeTable/fast:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MakeTable.dir/build.make MathFunctions/CMakeFiles/MakeTable.dir/build
+.PHONY : MakeTable/fast
+
+# Convenience name for target.
 MathFunctions/CMakeFiles/MathFunctions.dir/rule:
 	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MathFunctions.dir/rule
 .PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/rule
@@ -183,19 +209,19 @@ MathFunctions/fast:
 .PHONY : MathFunctions/fast
 
 # Convenience name for target.
-MathFunctions/CMakeFiles/MakeTable.dir/rule:
-	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MakeTable.dir/rule
-.PHONY : MathFunctions/CMakeFiles/MakeTable.dir/rule
+MathFunctions/CMakeFiles/SqrtLibrary.dir/rule:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
+.PHONY : MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
 
 # Convenience name for target.
-MakeTable: MathFunctions/CMakeFiles/MakeTable.dir/rule
+SqrtLibrary: MathFunctions/CMakeFiles/SqrtLibrary.dir/rule
 
-.PHONY : MakeTable
+.PHONY : SqrtLibrary
 
 # fast build rule for target.
-MakeTable/fast:
-	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MakeTable.dir/build.make MathFunctions/CMakeFiles/MakeTable.dir/build
-.PHONY : MakeTable/fast
+SqrtLibrary/fast:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/build
+.PHONY : SqrtLibrary/fast
 
 MakeTable.o: MakeTable.cxx.o
 
@@ -224,13 +250,40 @@ MakeTable.cxx.s:
 	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MakeTable.dir/build.make MathFunctions/CMakeFiles/MakeTable.dir/MakeTable.cxx.s
 .PHONY : MakeTable.cxx.s
 
+MathFunctions.o: MathFunctions.cxx.o
+
+.PHONY : MathFunctions.o
+
+# target to build an object file
+MathFunctions.cxx.o:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/MathFunctions.cxx.o
+.PHONY : MathFunctions.cxx.o
+
+MathFunctions.i: MathFunctions.cxx.i
+
+.PHONY : MathFunctions.i
+
+# target to preprocess a source file
+MathFunctions.cxx.i:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/MathFunctions.cxx.i
+.PHONY : MathFunctions.cxx.i
+
+MathFunctions.s: MathFunctions.cxx.s
+
+.PHONY : MathFunctions.s
+
+# target to generate assembly for a file
+MathFunctions.cxx.s:
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/MathFunctions.cxx.s
+.PHONY : MathFunctions.cxx.s
+
 mysqrt.o: mysqrt.cxx.o
 
 .PHONY : mysqrt.o
 
 # target to build an object file
 mysqrt.cxx.o:
-	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.o
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.o
 .PHONY : mysqrt.cxx.o
 
 mysqrt.i: mysqrt.cxx.i
@@ -239,7 +292,7 @@ mysqrt.i: mysqrt.cxx.i
 
 # target to preprocess a source file
 mysqrt.cxx.i:
-	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.i
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.i
 .PHONY : mysqrt.cxx.i
 
 mysqrt.s: mysqrt.cxx.s
@@ -248,7 +301,7 @@ mysqrt.s: mysqrt.cxx.s
 
 # target to generate assembly for a file
 mysqrt.cxx.s:
-	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.s
+	cd /home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build && $(MAKE) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/mysqrt.cxx.s
 .PHONY : mysqrt.cxx.s
 
 # Help Target
@@ -258,17 +311,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
-	@echo "... MathFunctions"
-	@echo "... edit_cache"
 	@echo "... install/local"
-	@echo "... test"
-	@echo "... MakeTable"
+	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... MakeTable"
+	@echo "... edit_cache"
+	@echo "... MathFunctions"
 	@echo "... rebuild_cache"
+	@echo "... SqrtLibrary"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... MakeTable.o"
 	@echo "... MakeTable.i"
 	@echo "... MakeTable.s"
+	@echo "... MathFunctions.o"
+	@echo "... MathFunctions.i"
+	@echo "... MathFunctions.s"
 	@echo "... mysqrt.o"
 	@echo "... mysqrt.i"
 	@echo "... mysqrt.s"

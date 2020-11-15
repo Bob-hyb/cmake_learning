@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "Table.h"
-  "CMakeFiles/MathFunctions.dir/mysqrt.cxx.o"
-  "libMathFunctions.pdb"
-  "libMathFunctions.a"
+  "CMakeFiles/MathFunctions.dir/MathFunctions.cxx.o"
+  "../libMathFunctions.pdb"
+  "../libMathFunctions.so"
 )
 
 # Per-language clean rules from dependency scanning.

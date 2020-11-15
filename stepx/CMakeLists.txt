@@ -1,65 +1,26 @@
 cmake_minimum_required(VERSION 3.10)
 
-# Set the project name
+# set the project name and version
 project(Tutorial VERSION 1.0)
 
-option(USE_MYMATH "Use tutorial provided math implementation" ON)
-
+# specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-# set(CMAKE_INSTALL_PREFIX "/home/ybhuang/torment/cmake_learning/cmake_learning/install/")
 
-# Can't be placed before the line6, because the definition is depending on the option
+# control where the static and shared libraries are built so that on windows
+# we don't need to tinker with the path to run the executable
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+
+# configure a header file to pass the version number only
 configure_file(TutorialConfig.h.in TutorialConfig.h)
 
-if(USE_MYMATH)
-  add_subdirectory(MathFunctions)
-  
-  list(APPEND EXTRA_LIBS MathFunctions) 
-  # The following line is not needed after we use INTERFACE in lib CMakeLists
-  # list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions")
-endif()
+# add the MathFunctions library
+add_subdirectory(MathFunctions)
 
-# Add the executable
+# add the executable
 add_executable(Tutorial tutorial.cxx)
-
-target_link_libraries(Tutorial PUBLIC ${EXTRA_LIBS})
-
-target_include_directories(Tutorial PUBLIC 
-                           "${PROJECT_BINARY_DIR}"
-                           # The following line is not needed after we use INTERFACE in lib CMakeLists
-                           # "${EXTRA_INCLUDES}"
-                           )
-
-# used for make install
-install(TARGETS Tutorial DESTINATION "/home/ybhuang/torment/cmake_learning/cmake_learning/install")
-install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION "/home/ybhuang/torment/cmake_learning/cmake_learning/install")
-
-# There is an already exited executble named ctest, it will read the test config file named cTestTestfile.cmake to do the test
-# for us, you can also use "make test" to do the test. 
-# This file is generated alongside makefile
-enable_testing()
-# does the application run
-add_test(NAME Runs COMMAND Tutorial 25)
-
-# makes use of the PASS_REGULAR_EXPRESSION test property to verify that the output of the test contains certain strings.
-add_test(NAME Usage COMMAND Tutorial)
-set_tests_properties(Usage PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number")
-
-# define a function to simplify adding tests
-function(do_test target arg result)
-  add_test(NAME Comp${arg} COMMAND ${target} ${arg})
-  set_tests_properties(Comp${arg}
-    PROPERTIES PASS_REGULAR_EXPRESSION ${result}
-    )
-endfunction(do_test target arg result)
-
-# do a bunch of result based tests
-do_test(Tutorial 4 "4 is 2")
-do_test(Tutorial 9 "9 is 3")
-do_test(Tutorial 5 "5 is 2.236")
-do_test(Tutorial 7 "7 is 2.645")
-do_test(Tutorial 25 "25 is 5")
-do_test(Tutorial -25 "-25 is [-nan|nan|0]")
-do_test(Tutorial 0.0001 "0.0001 is 0.01")
-
+target_link_libraries(Tutorial PUBLIC MathFunctions)

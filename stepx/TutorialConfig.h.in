@@ -1,11 +1,3 @@
 // the configured options and settings for Tutorial
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
-
-// this line is required for ifdef... in tutorial.cxx
-#cmakedefine USE_MYMATH
-
-// does the platform provide exp and log functions?
-/* Not needed because we use target_compile_definition */
-// #cmakedefine HAVE_LOG
-// #cmakedefine HAVE_EXP

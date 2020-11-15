@@ -37,42 +37,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial"
-         RPATH "")
-  endif()
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/ybhuang/torment/cmake_learning/cmake_learning/install" TYPE EXECUTABLE FILES "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/Tutorial")
-  if(EXISTS "$ENV{DESTDIR}/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/ybhuang/torment/cmake_learning/cmake_learning/install/Tutorial")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/ybhuang/torment/cmake_learning/cmake_learning/install/TutorialConfig.h")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/ybhuang/torment/cmake_learning/cmake_learning/install" TYPE FILE FILES "/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/TutorialConfig.h")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/stepx_build/MathFunctions/cmake_install.cmake")

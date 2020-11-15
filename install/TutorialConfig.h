@@ -4,3 +4,8 @@
 
 // this line is required for ifdef... in tutorial.cxx
 #define USE_MYMATH
+
+// does the platform provide exp and log functions?
+/* Not needed because we use target_compile_definition */
+/* #undef HAVE_LOG */
+/* #undef HAVE_EXP */

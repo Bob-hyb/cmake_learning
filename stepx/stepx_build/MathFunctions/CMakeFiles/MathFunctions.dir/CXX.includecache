@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/mysqrt.cxx
-iostream
+/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/MathFunctions.cxx
+MathFunctions.h
+/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/MathFunctions.h
+cmath
 -
-TutorialConfig.h
--
-Table.h
--
+mysqrt.h
+/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/mysqrt.h
 
-MathFunctions/Table.h
+/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/MathFunctions.h
+
+/home/ybhuang/torment/cmake_learning/cmake_learning/stepx/MathFunctions/mysqrt.h
 

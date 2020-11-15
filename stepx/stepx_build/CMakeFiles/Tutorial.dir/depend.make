@@ -3,5 +3,4 @@
 
 CMakeFiles/Tutorial.dir/tutorial.cxx.o: ../MathFunctions/MathFunctions.h
 CMakeFiles/Tutorial.dir/tutorial.cxx.o: ../tutorial.cxx
-CMakeFiles/Tutorial.dir/tutorial.cxx.o: TutorialConfig.h
 
